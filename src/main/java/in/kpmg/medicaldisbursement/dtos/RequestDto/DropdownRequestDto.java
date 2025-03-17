@@ -1,0 +1,15 @@
+package in.kpmg.medicaldisbursement.dtos.RequestDto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class DropdownRequestDto {
+	private Integer distId;
+	private Integer stateId;
+	private Integer mandalId;
+
+}

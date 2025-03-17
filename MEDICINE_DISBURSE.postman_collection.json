@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "a0816def-5598-4e2f-867e-00900ffaa8c2",
+		"name": "MEDICINE DISBURSE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33450591"
+	},
+	"item": [
+		{
+			"name": "SavePhysician&Drugs by authorized person",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNRURDTzFfQ0hDX0tUQk0iLCJyb2xlIjoxLCJleHAiOjE3MjI2MjMyNzAsImlhdCI6MTcyMjYxOTY3MH0.WyEzLs6htC3u-ag7xWeckPM02x-PFRMI8CIzo19HKLaCE-4wN98K6Jp9DuzFXCzhbYHjGG46FmcGyhlyORZiuQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"beneficiaryId\": 13,\r\n    \"name\":\"Shweta\",\r\n    \"mobileNo\":9811596888,\r\n    \"mobileAltNo\": 9876543456,\r\n    \"designationId\": 3,\r\n    \"relation\":16,\r\n    \"dob\": \"2012/12/12\",\r\n    \"gender\": 11,\r\n    \"email\": \"sweta798@gmail.com\",\r\n    \"houseNo\": \"B-167\",\r\n    \"street\": \"Nyay Khand\",\r\n    \"state\": 19,\r\n    \"district\": 46,\r\n    \"mandal\": 693,\r\n    \"village\": 18522,\r\n    \"pincode\": 110982,\r\n    \"doctorName\": \"Dr. Sharma\",\r\n    \"doctorPhoneNo\": 9999999999,\r\n    \"remarks\": \"Diabetes Treatment\",\r\n    \"status\": 1,\r\n    \"crtBy\": 20,\r\n    \"uptBy\": 20,\r\n    \"shipmentType\": 23,\r\n    \"authorizedName\": \"Shyam Sundar\",\r\n    \"requestedPersonType\": 25,\r\n    \"authorizedPersonMob\": 7865436782, \r\n    \"authorizationLetter\":{\r\n        \"attachmentType\": 23,\r\n        \"fileName\": \"PrintPDF-Template.pdf\",\r\n        \"filePath\": \"9WA9SRfpbX7ASxzoMcATBfzloBACaa2WI6ito1jNhJfTmf29QTdzr8MDUWG3c0vAkQSJS5evTMAyrAXcNbRFuwO9R1og4jJ1sItzGElqzUh0E/Zo7gveK0MDHxWMMXS5un3aDwH3avDRo7G9FY3I6eVk8Q5SId9NALQfHBgCVX8iJlpiyOxfqtIS8OmXxiCR\"\r\n    },\r\n    \"drugList\": [\r\n        {\r\n            \"drugName\": \"Insulin\",\r\n            \"noOfTablets\": 50,\r\n            \"drugTypeId\": 20,\r\n            \"status\": 1\r\n        },\r\n        {\r\n            \"drugName\": \"Monocef\",\r\n            \"noOfTablets\": 20,\r\n            \"drugTypeId\": 22,\r\n            \"status\": 1\r\n        },\r\n        {\r\n            \"drugName\": \"Amoxylin\",\r\n            \"noOfTablets\": 4,\r\n            \"drugTypeId\": 21,\r\n            \"status\": 1\r\n        }\r\n    ],\r\n    \"fileList\":[\r\n        {\r\n            \"attachmentType\": 2,\r\n            \"fileName\": \"Devesh_Sign.jpg\",\r\n            \"filePath\": \"ZO3+g/YHBQCUevN07OiWGn0q+2S1ywF7Qbds7t9Tf56grA0K91S5Y+Bm3oAu4WkuNxSR6rAkn1x7pcUkJNu2DhHxV1kEaP2psTl5UB/+sZPCST1nbQg96sR3oV1NHJi+Rfd5P9M+GO1T0GDjHB8dyK27CcRbAjA9DrkW8N3t5FRKDLYK1yBrNrjJKRPWSkt/\"\r\n        },\r\n        {\r\n            \"attachmentType\": 2,\r\n            \"fileName\": \"Security Certificate.pdf\",\r\n            \"filePath\": \"ELCPbzDfw0sVZ5usORn8oXJnH2Z5h0Jo40sR3Ig4mqsSqO49NNqicMHxgo5LxVKyE4jN/6Uz/N9Y6HFCySkPiF/GqoFMtTnFTxXfTFSRHakM+xXCc4EOgSAIyiamhpU/vF8NVRJeAEeUIXsgCwrV8U+KLEcvEpKqMEdGFg/+/b6Y0cin4r1Iaqkor+YS91Yk\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:18000/medicaldisbursement/savePhysicianDrugs",
+					"host": [
+						"localhost"
+					],
+					"port": "18000",
+					"path": [
+						"medicaldisbursement",
+						"savePhysicianDrugs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPhysicianDrugFile by RequestNo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNRURDTzFfQ0hDX0tUQk0iLCJyb2xlIjoxLCJleHAiOjE3MjI1OTk5NTAsImlhdCI6MTcyMjU5NjM1MH0.XaHCi11ZUxRm0TMjCYODjLIryFtaumFO-KDu36SQF71lKimg325fasTp0hmwBZWsHWI0ZkBfAQfkZuWg9V70XQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requestNumber\":\"MD/2024/8/0000036\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:18000/medicaldisbursement/getPhysicianDrugFile",
+					"host": [
+						"localhost"
+					],
+					"port": "18000",
+					"path": [
+						"medicaldisbursement",
+						"getPhysicianDrugFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"MEDCO1_CHC_KTBM\",\r\n    \"password\":\"dHJ1c3Q=\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:18000/medicaldisbursement/user/authenticate",
+					"host": [
+						"localhost"
+					],
+					"port": "18000",
+					"path": [
+						"medicaldisbursement",
+						"user",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Attachment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNRURDTzFfQ0hDX0tUQk0iLCJyb2xlIjoxLCJleHAiOjE3MjI2MDQ5MDUsImlhdCI6MTcyMjYwMTMwNX0.ktzPE3BLXzlXjE1sJmszPHN2I9SdHiJyAGfIJ-FrSdiVJIXHzCcNwcfIvLfBip0xCfK-3EUcIBfL4V7jYTGeCQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": [
+								"/C:/Users/deveshsharma3/Downloads/Security Certificate.pdf",
+								"/C:/Users/deveshsharma3/Downloads/Devesh_Sign.jpg"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:18000/medicaldisbursement/uploadAttachment",
+					"host": [
+						"localhost"
+					],
+					"port": "18000",
+					"path": [
+						"medicaldisbursement",
+						"uploadAttachment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download File",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNRURDTzFfQ0hDX0tUQk0iLCJyb2xlIjoxLCJleHAiOjE3MjIzMjY5MDksImlhdCI6MTcyMjMyMzMwOX0.tSJCX-s7DPXEgY4808pujKgM2lEl4M9A4z1ZkcRynqzhyGiT7GRqqY3Xve0x4frv6w7ynvlSnYauwzCbqBTM5Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filePath\":\"Bqp9Fm17hNDw3XoCY/x9TZwG1TFJGTdHPc61LKyfqS80sEGezR44F8cn48fZBiy3z6Zd7OFGk9os6tKfK4YuvZhRv86C9fi/sUdSHsUMMoqFGd5ENLmDQawaxpFwp8mbOY5eeADWNoyjeoL0P0miuVjRZ4rpyNeYT9I0SNE9R0/C7Jdyo1bI++mua7upDJe+\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:18000/medicaldisbursement/download",
+					"host": [
+						"localhost"
+					],
+					"port": "18000",
+					"path": [
+						"medicaldisbursement",
+						"download"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SavePhysician&Drugs by self",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNRURDTzFfQ0hDX0tUQk0iLCJyb2xlIjoxLCJleHAiOjE3MjI2MjM4OTEsImlhdCI6MTcyMjYyMDI5MX0.3kCOVZjwbOPWAF4bR0PcrFXqPxn-9I_JQG3bgmmkDWWtuu4uNznAWIBmw8Uh4Hzu9DdQXJp2HudtantRM317Eg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"beneficiaryId\": 21,\r\n    \"name\":\"Shweta\",\r\n    \"mobileNo\":7634827483,\r\n    \"mobileAltNo\": 9876543456,\r\n    \"relation\":16,\r\n    \"designationId\": null,\r\n    \"dob\": \"2012/12/12\",\r\n    \"gender\": 11,\r\n    \"email\": \"chaiyaa789@gmail.com\",\r\n    \"houseNo\": \"B-167\",\r\n    \"street\": \"Nyay Khand\",\r\n    \"state\": 19,\r\n    \"district\": 46,\r\n    \"mandal\": 693,\r\n    \"village\": 18522,\r\n    \"pincode\": 110982,\r\n    \"doctorName\": \"Dr. Sharma\",\r\n    \"doctorPhoneNo\": 9999999999,\r\n    \"remarks\": \"Diabetes Treatment\",\r\n    \"status\": 1,\r\n    \"crtBy\": 20,\r\n    \"uptBy\": 20,\r\n    \"shipmentType\": 23,\r\n    \"authorizedName\": null,\r\n    \"authorizedPersonMob\": null, \r\n    \"authorizationLetter\": null,\r\n    \"requestedPersonType\": 24,\r\n    \"drugList\": [\r\n        {\r\n            \"drugName\": \"Insulin\",\r\n            \"noOfTablets\": 50,\r\n            \"drugTypeId\": 20,\r\n            \"status\": 1\r\n        },\r\n        {\r\n            \"drugName\": \"Monocef\",\r\n            \"noOfTablets\": 20,\r\n            \"drugTypeId\": 22,\r\n            \"status\": 1\r\n        },\r\n        {\r\n            \"drugName\": \"Amoxylin\",\r\n            \"noOfTablets\": 4,\r\n            \"drugTypeId\": 21,\r\n            \"status\": 1\r\n        }\r\n    ],\r\n    \"fileList\":[\r\n        {\r\n            \"attachmentType\": 2,\r\n            \"fileName\": \"Devesh_Sign.jpg\",\r\n            \"filePath\": \"ZO3+g/YHBQCUevN07OiWGn0q+2S1ywF7Qbds7t9Tf56grA0K91S5Y+Bm3oAu4WkuNxSR6rAkn1x7pcUkJNu2DhHxV1kEaP2psTl5UB/+sZPCST1nbQg96sR3oV1NHJi+Rfd5P9M+GO1T0GDjHB8dyK27CcRbAjA9DrkW8N3t5FRKDLYK1yBrNrjJKRPWSkt/\"\r\n        },\r\n        {\r\n            \"attachmentType\": 2,\r\n            \"fileName\": \"Security Certificate.pdf\",\r\n            \"filePath\": \"ELCPbzDfw0sVZ5usORn8oXJnH2Z5h0Jo40sR3Ig4mqsSqO49NNqicMHxgo5LxVKyE4jN/6Uz/N9Y6HFCySkPiF/GqoFMtTnFTxXfTFSRHakM+xXCc4EOgSAIyiamhpU/vF8NVRJeAEeUIXsgCwrV8U+KLEcvEpKqMEdGFg/+/b6Y0cin4r1Iaqkor+YS91Yk\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:18000/medicaldisbursement/savePhysicianDrugs",
+					"host": [
+						"localhost"
+					],
+					"port": "18000",
+					"path": [
+						"medicaldisbursement",
+						"savePhysicianDrugs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Vendor Drug Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNRURDTzFfQ0hDX0tUQk0iLCJyb2xlIjoxLCJleHAiOjE3MjI2ODQzMTEsImlhdCI6MTcyMjY4MDcxMX0.6cnTtuy5Pm0wLQclBRY6MnNrKzozG_8ilOUByiFgOojgniXgldQpeRYsZGXxRt8fgqbw438Ari9VoU1cjHNQEA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"drugId\": 96,\r\n        \"drugName\": null,\r\n        \"batchNo\": \"A-C\",\r\n        \"manufacturedDate\": \"08/03/2024\",\r\n        \"expiryDate\": \"10/10/2030\",\r\n        \"mrp\": 9800,\r\n        \"gstSlab\": \"LOW\"\r\n    },\r\n    {\r\n        \"drugId\": 97,\r\n        \"drugName\": \"Amoxylin\",\r\n        \"batchNo\": \"D-G\",\r\n        \"manufacturedDate\": \"14/06/2023\",\r\n        \"expiryDate\": \"15/11/2029\",\r\n        \"mrp\": 12000,\r\n        \"gstSlab\": \"MED\"\r\n    },\r\n    {\r\n        \"drugId\": 98,\r\n        \"drugName\": null,\r\n        \"batchNo\": \"K-X\",\r\n        \"manufacturedDate\": \"15/04/2020\",\r\n        \"expiryDate\": \"12/12/2027\",\r\n        \"mrp\": 14400,\r\n        \"gstSlab\": \"HIG\" \r\n    }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:18000/medicaldisbursement/saveVendorDrugs",
+					"host": [
+						"localhost"
+					],
+					"port": "18000",
+					"path": [
+						"medicaldisbursement",
+						"saveVendorDrugs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Dispatch Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNRURDTzFfQ0hDX0tUQk0iLCJyb2xlIjoxLCJleHAiOjE3MjI3NjA4MjAsImlhdCI6MTcyMjc1NzIyMH0.hbgr02Xy1BUA1qrvAhIL3zGTZmtq2f3lWYHBRqbMoQibGNY3Nbf2YIpEAO_C7wYwXW1Q9VUyoG5HuNTamUIMAQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"drugIdList\":[81,82,83],\r\n    \"postalTrackingId\": \"PST-9028662\",\r\n    \"dispatchDate\": \"04/08/2024\",\r\n    \"remarks\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:18000/medicaldisbursement/saveDispatchDetails",
+					"host": [
+						"localhost"
+					],
+					"port": "18000",
+					"path": [
+						"medicaldisbursement",
+						"saveDispatchDetails"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
